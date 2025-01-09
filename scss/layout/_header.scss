@@ -1,0 +1,49 @@
+.header__logo__container {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo__list {
+  display: flex;
+  align-items: center;
+  gap: 4.2rem;
+}
+
+.header__logo__link {
+  font-weight: 400;
+  font-size: $header-fs;
+  line-height: $header-lh;
+  letter-spacing: 2px;
+  color: $primary-dark-grey;
+}
+
+.header__logo__link:active {
+  text-decoration: underline;
+}
+
+.hero__bar__icon {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .header__logo__list {
+    display: none;
+  }
+
+  .hero__bar__icon {
+    display: flex;
+  }
+
+  .header__logo__container {
+    padding-top: 3.4rem;
+    padding-bottom: 3.4rem;
+  }
+}

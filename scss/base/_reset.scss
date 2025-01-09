@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 *::after,
 *::before {
   margin: 0;
@@ -35,9 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-//   font-family: ;
-//   font-weight: ;
-//   line-height: ;
+  font-family: "Jost";
 }
 
 main {
@@ -46,9 +50,43 @@ main {
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.dark__btn {
+  display: inline-block;
+  padding: 1.8rem 2.5rem 1.6rem 2.4rem;
+  background-color: $white;
+  color: $primary-black;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  border-radius: 0.8rem;
+  text-transform: uppercase;
+}
+
+.dark__btn:hover {
+  background-color: $light-peach-color;
+  color: $white;
+}
+
+.light__btn {
+  display: inline-block;
+  padding: 1.8rem 2.5rem 1.6rem 2.4rem;
+  background-color: $primary-color-peach;
+  color: $white;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  border-radius: 0.8rem;
+  text-transform: uppercase;
+}
+
+.light__btn:hover {
+  background-color: $light-peach-color;
+  color: $white;
 }
