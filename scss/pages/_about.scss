@@ -1,7 +1,4 @@
-.main {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
+
 
 .about {
   padding-bottom: 5rem;
@@ -44,6 +41,94 @@
   border-radius: 0 15px 15px 0;
 }
 
+// About talent section
+.about__talent {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.about__talent__container {
+  display: flex;
+  align-items: center;
+  gap: 9.4rem;
+  background-color: $collection-color;
+  padding-left: 0;
+  background-image: url(../../images/about/desktop/bg-pattern.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about__talent__img__box {
+  width: 47.6rem;
+  height: 60rem;
+  background-image: url(../../images/about/desktop/image-world-class-talent.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__talent__title {
+  color: $primary-color-peach;
+  font-weight: 500;
+  font-size: $large-h2-fs;
+  line-height: $large-h2-lh;
+  margin-bottom: 2.4rem;
+}
+
+.about__talent__text {
+  width: 44.5rem;
+  font-weight: 400;
+  font-size: $normal-fs;
+  line-height: $normal-lh;
+}
+
+.second__text {
+  margin-top: 3rem;
+}
+
+// Countries
+.countries__container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.countries__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10.4rem;
+}
+
+.countries__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coutries__img {
+  margin-bottom: 4.8rem;
+}
+
+.countries__title {
+  font-weight: 500;
+  font-size: $large-h3-fs;
+  line-height: $large-h3-lh;
+  margin-bottom: 3.2rem;
+}
+
+// Ideal
+.ideal__container {
+  padding-left: 9rem;
+  padding-right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ideal__img__box {
+  background-image: url(../../images/about/desktop/image-real-deal.jpg);
+}
+
+// About media
 @media screen and (max-width: 850px) {
   .about__container {
     display: flex;
@@ -55,9 +140,11 @@
     padding-bottom: 6.4rem;
     gap: 6.4rem;
   }
+
   .about__content {
     text-align: center;
   }
+
   .about__img__box {
     width: 100%;
     max-width: 1000px;
@@ -68,6 +155,7 @@
   }
 }
 
+// About media
 @media screen and (max-width: 500px) {
   .about__title {
     font-size: $medium-h2-fs;
@@ -90,5 +178,111 @@
     width: 32.7rem;
     font-size: $small-fs;
     line-height: $small-lh;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about__talent__container {
+    display: flex;
+    flex-direction: column;
+    gap: 6.8rem;
+    padding-bottom: 6.8rem;
+    padding-right: 0;
+  }
+
+  .about__talent__img__box {
+    max-width: 80rem;
+    width: 100%;
+    height: 32rem;
+    background-image: url(../../images/about/tablet/image-world-class-talent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .about__talent__title {
+    color: $primary-color-peach;
+  }
+
+  .about__talent__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .about__talent__text {
+    max-width: 572px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about {
+    padding-bottom: 0;
+  }
+
+  .about__talent {
+    padding-top: 0;
+  }
+
+  .about__container {
+    border-radius: 0;
+  }
+
+  .about__talent__container {
+    gap: 6.8rem;
+    padding-bottom: 8rem;
+  }
+
+  .about__talent__img__box {
+    background-image: url(../../images/about/mobile/image-world-class-talent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .about__talent__title {
+    font-size: $medium-h2-fs;
+    line-height: $medium-h2-lh;
+    color: $primary-color-peach;
+  }
+
+  .about__talent__content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about__talent__text {
+    max-width: 327px;
+    width: 100%;
+    font-size: $small-fs;
+    line-height: $small-lh;
+  }
+}
+
+// Ideal section media
+@media screen and (max-width: 850px) {
+  .ideal__container {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .ideal__img__box {
+    background-image: url(../../images/about/tablet/image-real-deal.jpg);
+    border-radius: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .ideal {
+    padding-top: 9rem;
+  }
+  .ideal__img__box {
+    background-image: url(../../images/about/mobile/image-real-deal.jpg);
+    border-radius: 0;
   }
 }
