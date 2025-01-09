@@ -177,6 +177,24 @@
       url(../../images/home/desktop/image-web-design-large.jpg);
   }
 }
+.design__app__project:nth-child(2) {
+  background-image: url(../../images/home/desktop/image-app-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../../images/home/desktop/image-app-design.jpg);
+  }
+  &:active {
+    background-image: linear-gradient(
+        rgb(231, 129, 107, 0.8),
+        rgb(231, 129, 107, 0.8)
+      ),
+      url(../../images/home/desktop/image-app-design.jpg);
+  }
+}
 
 // Design info box
 @media screen and (max-width: 420px) {
