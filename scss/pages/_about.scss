@@ -68,6 +68,50 @@
   }
 }
 
+// About talent section
+.about__talent {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.about__talent__container {
+  display: flex;
+  align-items: center;
+  gap: 9.4rem;
+  background-color: $collection-color;
+  padding-left: 0;
+  background-image: url(../../images/about/desktop/bg-pattern.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about__talent__img__box {
+  width: 47.6rem;
+  height: 60rem;
+  background-image: url(../../images/about/desktop/image-world-class-talent.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about__talent__title {
+  font-weight: 500;
+  font-size: $large-h2-fs;
+  line-height: $large-h2-lh;
+  margin-bottom: 2.4rem;
+}
+
+.about__talent__text {
+  width: 44.5rem;
+  font-weight: 400;
+  font-size: $normal-fs;
+  line-height: $normal-lh;
+}
+
+.second__text {
+  margin-top: 3rem;
+}
+
+// About media
 @media screen and (max-width: 500px) {
   .about__title {
     font-size: $medium-h2-fs;
@@ -88,6 +132,86 @@
   }
   .about__text {
     width: 32.7rem;
+    font-size: $small-fs;
+    line-height: $small-lh;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about__talent__container {
+    display: flex;
+    flex-direction: column;
+    gap: 6.8rem;
+    padding-bottom: 6.8rem;
+    padding-right: 0;
+  }
+
+  .about__talent__img__box {
+    max-width: 80rem;
+    width: 100%;
+    height: 32rem;
+    background-image: url(../../images/about/tablet/image-world-class-talent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .about__talent__title {
+    color: $primary-color-peach;
+  }
+
+  .about__talent__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .about__talent__text {
+    max-width: 572px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .about {
+    padding-bottom: 0;
+  }
+
+  .about__talent {
+    padding-top: 0;
+  }
+
+  .about__container {
+    border-radius: 0;
+  }
+
+  .about__talent__container {
+    gap: 6.8rem;
+    padding-bottom: 8rem;
+  }
+
+  .about__talent__img__box {
+    background-image: url(../../images/about/mobile/image-world-class-talent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .about__talent__title {
+    font-size: $medium-h2-fs;
+    line-height: $medium-h2-lh;
+    color: $primary-color-peach;
+  }
+
+  .about__talent__content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about__talent__text {
+    max-width: 327px;
+    width: 100%;
     font-size: $small-fs;
     line-height: $small-lh;
   }
