@@ -12,27 +12,29 @@
 @import "./layout/header";
 @import "./layout/footer";
 
+@import "./pages/index";
+
 .main {
 }
 
 .hero {
   padding-top: 1rem;
-  background-color: $primary-color-peach;
-  background-image: url(../images/home/desktop/bg-pattern-hero-home.svg);
-  background-repeat: no-repeat;
-  background-position: top right;
 }
 
 .hero__container {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: $primary-color-peach;
+  background-image: url(../images/home/desktop/bg-pattern-hero-home.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  border-radius: 1.5rem;
 }
 
 .hero__content {
   max-width: 540px;
   width: 100%;
-  // margin-top: 14.5rem;
 }
 
 .hero__title {
@@ -52,16 +54,115 @@
 }
 
 .hero__img {
-  width: 284px;
-  height: 573px;
+  width: 300px;
+  height: 575px;
 }
 
 // Projects section
 .projects__container {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   height: 64rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "webd appd"
+    "webd graphicd";
+  row-gap: 3rem;
+  column-gap: 2.4rem;
+}
+
+.projects__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  row-gap: 3rem;
+  column-gap: 2.4rem;
+  border-radius: 15px;
+}
+
+.projects__item:nth-child(1) {
+  grid-area: webd;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/home/desktop/image-web-design-large.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../images/home/desktop/image-web-design-large.jpg);
+  }
+
+  &:active {
+    background-image: linear-gradient(
+        rgb(231, 129, 107, 0.8),
+        rgb(231, 129, 107, 0.8)
+      ),
+      url(../images/home/desktop/image-web-design-large.jpg);
+  }
+}
+
+.projects__item:nth-child(2) {
+  grid-area: appd;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/home/desktop/image-app-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../images/home/desktop/image-app-design.jpg);
+  }
+
+  &:active {
+    background-image: linear-gradient(
+        rgb(231, 129, 107, 0.8),
+        rgb(231, 129, 107, 0.8)
+      ),
+      url(../images/home/desktop/image-app-design.jpg);
+  }
+}
+
+.projects__item:nth-child(3) {
+  grid-area: graphicd;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/home/desktop/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../images/home/desktop/image-graphic-design.jpg);
+  }
+  &:active {
+    background-image: linear-gradient(
+        rgb(231, 129, 107, 0.8),
+        rgb(231, 129, 107, 0.8)
+      ),
+      url(../images/home/desktop/image-graphic-design.jpg);
+  }
+}
+
+.project__title {
+  font-weight: 500;
+  font-size: $large-h2-fs;
+  line-height: $large-h2-lh;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.projects__text {
+  font-weight: 500;
+  font-size: $small-fs;
+  line-height: $small-lh;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 // Work__info section
@@ -142,7 +243,6 @@
   }
 
   .hero__text {
-    width: 44.5rem;
     text-align: center;
     margin-bottom: 1.9rem;
   }
@@ -170,7 +270,23 @@
   }
 }
 
-// Work__info
+// Projects section
+@media screen and (max-width: 768px) {
+  .projects__container {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "webd "
+      "appd"
+      "graphicd";
+  }
+  .projects__item {
+    padding: 5.3rem 0;
+    width: 100%;
+  }
+}
+
+// Work__info section
 @media screen and (max-width: 850px) {
   .work__info__container {
     flex-direction: column;
@@ -202,9 +318,6 @@
     text-align: start;
   }
 }
-
-
-
 
 @media screen and (max-width: 490px) {
   .work__info__container {
