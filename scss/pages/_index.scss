@@ -1,0 +1,216 @@
+// Web design styles
+.main {
+}
+.design__info__box {
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color-peach;
+  border-radius: 1.5rem;
+  background-image: url(../../images/web-design/desktop/bg-pattern-intro-web.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  color: $white;
+}
+
+.design__info__title {
+  font-weight: 500;
+  font-size: $large-h2-fs;
+  line-height: $large-h2-lh;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.design__info__text {
+  width: 40rem;
+  font-weight: 400;
+  text-align: center;
+  font-size: $normal-fs;
+  line-height: $normal-lh;
+}
+
+.design__collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  row-gap: 3rem;
+  column-gap: 3rem;
+}
+.design__info__collection {
+  padding-top: 8rem;
+}
+
+.design__collection__item {
+  border-radius: 1.5rem;
+}
+
+.design__collection__img {
+  // max-width: 35rem;
+  width: 100%;
+  height: 32rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  margin-bottom: 3.2rem;
+}
+
+.design__collection__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 1.5rem 1.5rem;
+  background-color: $collection-color;
+  padding: 3.2rem;
+}
+
+.design__collection__content:hover {
+  background-color: $primary-color-peach;
+
+  .design__collection__title {
+    color: $white;
+  }
+
+  .design__collection__text {
+    color: $white;
+  }
+}
+
+.design__collection__title {
+  font-weight: 500;
+  font-size: $large-h3-fs;
+  line-height: $large-h3-lh;
+  letter-spacing: 5px;
+  color: $primary-color-peach;
+  margin-bottom: 1.6rem;
+}
+.design__collection__text {
+  font-weight: 400;
+  font-size: $normal-fs;
+  line-height: $normal-lh;
+  text-align: center;
+  color: $primary-dark-grey;
+}
+
+// Design__projects
+.design__projects__container {
+  padding-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.design__projects {
+  display: grid;
+  grid-template-columns: repeat(2, 58.1rem);
+  grid-template-rows: repeat(1, 30.8rem);
+  grid-template-areas: "app__design graphic__design";
+  gap: 2rem;
+}
+
+.design__projects__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  gap: 2.4rem;
+  border-radius: 1.5rem;
+}
+
+.design__projects__item:nth-child(1) {
+  grid-area: app__design;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../images/home/desktop/image-app-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../../images/home/desktop/image-app-design.jpg);
+  }
+
+  &:active {
+    background-image: linear-gradient(
+        rgb(231, 129, 107, 0.8),
+        rgb(231, 129, 107, 0.8)
+      ),
+      url(../../images/home/desktop/image-app-design.jpg);
+  }
+}
+
+.design__projects__item:nth-child(2) {
+  grid-area: graphic__design;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../images/home/desktop/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(../../images/home/desktop/image-graphic-design.jpg);
+  }
+  &:active {
+    background-image: linear-gradient(
+        rgb(231, 129, 107, 0.8),
+        rgb(231, 129, 107, 0.8)
+      ),
+      url(../../images/home/desktop/image-graphic-design.jpg);
+  }
+}
+
+// Design section media
+@media screen and (max-width: 850px) {
+  .design__collection {
+    grid-template-columns: 1fr;
+  }
+  .design__collection__item {
+    display: flex;
+  }
+  .design__collection__img {
+    width: 100%;
+    max-width: calc(339px - 18%);
+    border-radius: 1.5rem 0 0 1.5rem;
+  }
+  .design__collection__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .design__collection__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .design__collection__img {
+    width: 100%;
+    margin-bottom: 0;
+    max-width: calc(339px + 18%);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .design__collection__img {
+    max-width: 32.7rem;
+  }
+  .design__info__text {
+    max-width: 32rem;
+    width: 100%;
+  }
+}
+
+// Design__projects media
+@media screen and (max-width: 1030px) {
+  .design__projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 25rem);
+    grid-template-areas:
+      "app__design"
+      "graphic__design";
+    gap: 2rem;
+  }
+}
